@@ -21,7 +21,7 @@
           <div class="row p-0 m-0">
             <div class="col-2 p-0">
               <img
-                src="/images/11.jpg"
+                :src="'/images/' + room.buyer.image"
                 class="rounded-circle mt-1"
                 style="width: 40px; height: 40px"
               />
