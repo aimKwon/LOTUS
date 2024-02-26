@@ -25,8 +25,8 @@ public class UsersignupForm {
         private String id;
 
         @Schema(description = "비밀번호", example = "testUserPassword")
-        @Pattern(regexp = "^(?=.*[A-Za-z])(?=.*\\d)(?=.*[~!@#$])[A-Za-z\\d~!@#$]{8,11}$"
-                , message = "비밀번호는 영어 대소문자, 숫자, 특수문자(~!@#$)를 포함한 8~11 자리로 입력해야 합니다.")
+        @Pattern(regexp = "^(?=.*[A-Za-z])(?=.*\\d)(?=.*[~!@#$./])[A-Za-z\\d~!@#$./]{8,}$"
+                , message = "비밀번호는 영어 대소문자, 숫자, 특수문자(~!@#$)를 포함한 8 자리이상으로 입력해야 합니다.")
         @NotBlank(message = "비밀번호는 필수로 입력해야 합니다.")
         private String password;
 
