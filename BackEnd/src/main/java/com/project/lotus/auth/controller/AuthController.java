@@ -34,7 +34,6 @@ public class AuthController {
     private final JwtService jwtService;
     private final AuthServiceImpl authService;
 
-
     @Value("${admin.code}")
     private String ADMIN_CODE;
 
