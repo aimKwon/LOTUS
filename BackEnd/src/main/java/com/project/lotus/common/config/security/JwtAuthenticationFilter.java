@@ -41,7 +41,6 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         } else {
             logger.debug("유효한 Access Token이 없습니다.");
         }
-
         // 다음 filter Chain 실행 *24.01.18 jihyun
         filterChain.doFilter(request, response);
     }
