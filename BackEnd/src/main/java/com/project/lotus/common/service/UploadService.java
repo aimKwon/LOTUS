@@ -22,7 +22,7 @@ public class UploadService {
 
     public String fileUpload(List<MultipartFile> images) throws IOException {
 
-        StringBuilder imagesPaths = new StringBuilder();
+        StringBuffer imagesPaths = new StringBuffer();
 
         // UUID로 고유 이미지 파일명 저장 *24.01.26 jihyun
         if (!images.isEmpty()) {
@@ -40,7 +40,7 @@ public class UploadService {
 
     public String fileModify(List<MultipartFile> images, Product product) throws IOException {
 
-        StringBuilder imagesPaths = new StringBuilder();
+        StringBuffer imagesPaths = new StringBuffer();
 
         // 합친 이미지 파일명 잘라냄 *24.02.14 jihyun
         String[] savedImages = product.getImages().split(" ");
@@ -66,7 +66,7 @@ public class UploadService {
 
     public String fileModify(List<MultipartFile> images, Qna qna) throws IOException {
 
-        StringBuilder imagesPaths = new StringBuilder();
+        StringBuffer imagesPaths = new StringBuffer();
 
         // 합친 이미지 파일명 잘라냄 *24.02.14 jihyun
         String[] savedImages = qna.getImages().split(" ");
@@ -91,8 +91,8 @@ public class UploadService {
     }
 
     public String fileModify(List<MultipartFile> images, Review review) throws IOException {
-
-        StringBuilder imagesPaths = new StringBuilder();
+        
+        StringBuffer imagesPaths = new StringBuffer();
 
         // 합친 이미지 파일명 잘라냄 *24.02.14 jihyun
         String[] savedImages = review.getImages().split(" ");
@@ -119,7 +119,7 @@ public class UploadService {
 
     public String fileUpload (MultipartFile image) throws IOException {
 
-        StringBuilder profilePath = new StringBuilder();
+        StringBuffer profilePath = new StringBuffer();
 
         if (!image.isEmpty()) {
             String uniqueProfileName = UUID.randomUUID() + "_" + image.getOriginalFilename();
