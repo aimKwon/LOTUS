@@ -21,11 +21,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
-
 import static org.springframework.http.HttpStatus.*;
 
 @Tag(name = "Admin-Controller", description = "관리자 관련 API")
