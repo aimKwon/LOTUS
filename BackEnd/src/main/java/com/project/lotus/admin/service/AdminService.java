@@ -7,7 +7,6 @@ import com.project.lotus.auth.dto.SignupDto;
 import com.project.lotus.common.enums.CategoryName;
 import com.project.lotus.common.enums.TransactionStatus;
 import org.springframework.web.multipart.MultipartFile;
-
 import java.io.IOException;
 import java.util.List;
 
