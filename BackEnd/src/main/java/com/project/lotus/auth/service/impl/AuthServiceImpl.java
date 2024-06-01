@@ -9,7 +9,6 @@ import com.project.lotus.common.exception.ErrorCode;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-
 import static com.project.lotus.common.enums.Role.ROLE_ADMIN;
 import static com.project.lotus.common.enums.Role.ROLE_USER;
 import static com.project.lotus.common.exception.ErrorCode.*;
