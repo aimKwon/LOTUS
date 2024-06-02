@@ -1,7 +1,6 @@
 package com.project.lotus.auth.service;
 
 import com.project.lotus.auth.dto.*;
-
 import java.io.IOException;
 
 public interface AuthService {
