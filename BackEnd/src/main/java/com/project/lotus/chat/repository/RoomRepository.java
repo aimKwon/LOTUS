@@ -3,7 +3,6 @@ package com.project.lotus.chat.repository;
 import com.project.lotus.chat.entity.Room;
 import com.project.lotus.product.entity.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
-
 import java.util.List;
 import java.util.Optional;
 
