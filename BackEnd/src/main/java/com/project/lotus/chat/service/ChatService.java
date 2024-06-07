@@ -2,7 +2,6 @@ package com.project.lotus.chat.service;
 
 import com.project.lotus.chat.dto.ChatDto;
 import com.project.lotus.chat.dto.RoomDto;
-
 import java.util.List;
 
 public interface ChatService {
