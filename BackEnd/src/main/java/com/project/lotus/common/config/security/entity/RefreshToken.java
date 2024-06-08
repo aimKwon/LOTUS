@@ -1,6 +1,5 @@
 package com.project.lotus.common.config.security.entity;
 
-
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
