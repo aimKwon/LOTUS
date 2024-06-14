@@ -11,11 +11,10 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 import java.util.Map;
-
 import static org.springframework.http.HttpStatus.OK;
+
 @Tag(name = "Product-Controller", description = "중고 물품 관련 API")
 @RequestMapping("/product")
 @RestController
