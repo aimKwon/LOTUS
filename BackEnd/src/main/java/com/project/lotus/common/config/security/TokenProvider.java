@@ -16,13 +16,11 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
-
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Base64;
 import java.util.Date;
 import java.util.List;
-
 import static com.project.lotus.common.exception.ErrorCode.ACCESS_TOKEN_EXPIRED_EXCEPTION;
 import static com.project.lotus.common.exception.ErrorCode.REFRESH_TOKEN_EXPIRED_EXCEPTION;
 
