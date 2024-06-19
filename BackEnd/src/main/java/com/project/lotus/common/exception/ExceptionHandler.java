@@ -8,7 +8,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
-
 import static com.project.lotus.common.exception.ErrorCode.METHOD_ARGUMENT_TYPE_MISMATCH;
 
 @RestControllerAdvice
