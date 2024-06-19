@@ -1,6 +1,5 @@
 package com.project.lotus.common;
 
-
 import jakarta.persistence.EntityListeners;
 import jakarta.persistence.MappedSuperclass;
 import lombok.Getter;
