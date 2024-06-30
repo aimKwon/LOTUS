@@ -31,7 +31,7 @@ public class RefreshTokenController {
 
         RefreshTokenResponse refreshTokenResponse = new RefreshTokenResponse(map);
 
-        if(map.get("status").equals("401")) {
+        if (map.get("status").equals("401")) {
             return new ResponseEntity<RefreshTokenResponse>(refreshTokenResponse, HttpStatus.UNAUTHORIZED);
         }
 
