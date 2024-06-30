@@ -19,7 +19,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.HashMap;
 import java.util.Map;
-
 import static org.springframework.http.HttpStatus.CREATED;
 
 @Tag(name = "Auth-Controller", description = "회원가입, 로그인 관련 API")
