@@ -32,9 +32,6 @@ public class AuthController {
     private final JwtService jwtService;
     private final AuthServiceImpl authService;
 
-    @Value("${admin.code}")
-    private String ADMIN_CODE;
-
     // 이용자 회원 가입 *24.01.18 jihyun
     @Operation(summary = "이용자 회원가입", description = "이용자는 아이디, 비밀번호, 이름, 전화번호, 이메일로 회원가입합니다.")
     @PostMapping(value = "/signup", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
@@ -55,10 +52,6 @@ public class AuthController {
     @PostMapping(value = "/signup/admin", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity<AdminsignupForm.Response> adminSignup(
              @Valid AdminsignupForm.Request adminsignupForm) {
-
-        if (!ADMIN_CODE.equals(adminsignupForm.getAdminCode())) {
-            throw new CustomException(ErrorCode.ADMIN_CODE_NOT_MATCH);
-        }
 
         SignupDto.Response signuptDto = authService.adminSignup(adminsignupForm);
 
