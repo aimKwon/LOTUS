@@ -86,7 +86,8 @@ public class AuthController {
 
         return ResponseEntity.status(HttpStatus.OK)
                 .body(SigninForm.Response.builder()
-                        .tokenDto(tokenDto).build());
+                        .tokenDto(tokenDto)
+                        .build());
     }
 
     @ExceptionHandler (value=RuntimeException.class)
