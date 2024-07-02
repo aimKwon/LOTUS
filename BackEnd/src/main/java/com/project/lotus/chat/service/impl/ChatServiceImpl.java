@@ -33,7 +33,6 @@ public class ChatServiceImpl implements ChatService {
     @Value("${file.path}")
     private String fileDir;
 
-    // Repository *24.02.07 jihyun
     private final UserRepository userRepository;
     private final RoomRepository roomRepository;
     private final ProductRepository productRepository;
