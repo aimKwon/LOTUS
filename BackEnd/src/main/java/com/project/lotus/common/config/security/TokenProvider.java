@@ -155,7 +155,7 @@ public class TokenProvider {
         return !claims.getExpiration().before(new Date());
     }
 
-    // Token에서 클레임 정보 추출 *24.01.18 jihyun
+    // Access Token에서 클레임 정보 추출 *24.01.18 jihyun
     private Claims parseClaims(String token) {
 
         try {
