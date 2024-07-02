@@ -20,7 +20,6 @@ public class JwtService {
     private final RefreshTokenRepository refreshTokenRepository;
 
     // RefreshTokenRepository에 저장함 *24.01.29 jihyun
-    @Transactional
     public void save(TokenDto tokenDto) {
 
         RefreshToken refreshToken = RefreshToken.builder()
