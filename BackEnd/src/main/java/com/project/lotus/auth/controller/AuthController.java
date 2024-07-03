@@ -36,7 +36,7 @@ public class AuthController {
     @Operation(summary = "이용자 회원가입", description = "이용자는 아이디, 비밀번호, 이름, 전화번호, 이메일로 회원가입합니다.")
     @PostMapping(value = "/signup", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity<UsersignupForm.Response> userSignup(
-             @Valid UsersignupForm.Request usersignupForm) {
+             @Valid @RequestBody UsersignupForm.Request usersignupForm) {
 
         SignupDto.Response signuptDto = authService.userSignup(usersignupForm);
 
@@ -51,7 +51,7 @@ public class AuthController {
     @Operation(summary = "관리자 회원가입", description = "관리자는 인증번호, 아이디, 비밀번호, 이름, 전화번호, 이메일로 회원가입합니다.")
     @PostMapping(value = "/signup/admin", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity<AdminsignupForm.Response> adminSignup(
-             @Valid AdminsignupForm.Request adminsignupForm) {
+             @Valid @RequestBody AdminsignupForm.Request adminsignupForm) {
 
         SignupDto.Response signuptDto = authService.adminSignup(adminsignupForm);
 
