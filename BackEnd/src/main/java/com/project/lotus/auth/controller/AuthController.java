@@ -17,8 +17,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
 import java.util.HashMap;
 import java.util.Map;
+
 import static org.springframework.http.HttpStatus.CREATED;
 
 @Tag(name = "Auth-Controller", description = "회원가입, 로그인 관련 API")
@@ -32,11 +34,14 @@ public class AuthController {
     private final JwtService jwtService;
     private final AuthServiceImpl authService;
 
+    @Value("${admin.code}")
+    private String ADMIN_CODE;
+
     // 이용자 회원 가입 *24.01.18 jihyun
     @Operation(summary = "이용자 회원가입", description = "이용자는 아이디, 비밀번호, 이름, 전화번호, 이메일로 회원가입합니다.")
     @PostMapping(value = "/signup", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity<UsersignupForm.Response> userSignup(
-             @Valid @RequestBody UsersignupForm.Request usersignupForm) {
+             @Valid UsersignupForm.Request usersignupForm) {
 
         SignupDto.Response signuptDto = authService.userSignup(usersignupForm);
 
@@ -51,7 +56,11 @@ public class AuthController {
     @Operation(summary = "관리자 회원가입", description = "관리자는 인증번호, 아이디, 비밀번호, 이름, 전화번호, 이메일로 회원가입합니다.")
     @PostMapping(value = "/signup/admin", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity<AdminsignupForm.Response> adminSignup(
-             @Valid @RequestBody AdminsignupForm.Request adminsignupForm) {
+             @Valid AdminsignupForm.Request adminsignupForm) {
+
+        if (!ADMIN_CODE.equals(adminsignupForm.getAdminCode())) {
+            throw new CustomException(ErrorCode.ADMIN_CODE_NOT_MATCH);
+        }
 
         SignupDto.Response signuptDto = authService.adminSignup(adminsignupForm);
 
